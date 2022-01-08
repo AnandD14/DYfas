@@ -17,10 +17,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
         style: TextStyle(
             fontWeight: FontWeight.bold,
             letterSpacing: 3,
-            fontFamily: 'IndieFlower'
+            fontFamily: 'IndieFlower',
+            color: Colors.white
         ),
       ),
-      backgroundColor: backgroundColor,
+      backgroundColor: Colors.black,
       elevation: 0.0,
     );
   }

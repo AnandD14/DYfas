@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:luga_fataa/dyfas_theme.dart';
 import 'package:luga_fataa/home/home.dart';
+import 'package:luga_fataa/dyfas_theme.dart';
+
 
 import 'constant.dart';
 
@@ -11,20 +14,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final theme = DyfasTheme.light();
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Luga Fataa',
-      theme: ThemeData(
-        scaffoldBackgroundColor: kBackgroundColor,
-        primaryColor: kPrimaryColor,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
-        inputDecorationTheme: InputDecorationTheme(
-        hintStyle: TextStyle(
-          color: kBackgroundColor,
-        ),),
-      ),
+      title: 'DYFAS',
+
+      theme: theme,
       //  visualDensity: VisualDensity.adaptivePlatformDensity,),
-        home: HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }

@@ -27,7 +27,7 @@ class _HeaderState extends State<Header> {
 
     return Container(
       height: size.height * 0.1,
-      color: kSecondaryColor,
+      color: Colors.black,
       child: Padding(
         padding: EdgeInsets.all(kDefaultPadding),
         child: Container(

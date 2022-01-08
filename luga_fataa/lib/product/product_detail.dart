@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:luga_fataa/constant.dart';
 
 class ProductDetail extends StatefulWidget {
   const ProductDetail({
@@ -24,23 +25,39 @@ class _ProductDetailState extends State<ProductDetail> {
   Widget build(BuildContext context) {
 
     size = MediaQuery.of(context).size;
-    print(size!.height* 0.5);
 
     return SafeArea(
-      child: Hero(
-          tag:'product_image_$index',
-          child: Container(
-          height: size!.height * 0.5,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: NetworkImage(
-                      "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+      child: Scaffold (
+      body: Column(
+        children : [
+          Hero(
+            tag:'product_image_$index',
+            child: Container(
+              height: size!.height * 0.5,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/lehenga.jpg"),
+                      fit: BoxFit.cover
+                  )
+              ),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: IconButton( icon: Icon(Icons.arrow_back, color: kBackgroundColor,), onPressed: (){},),
                   ),
-                  fit: BoxFit.cover
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: IconButton( icon: Icon(Icons.shopping_basket_outlined, color: kBackgroundColor), onPressed: (){},),
+                  ),
+                ]
               )
+            )
           ),
-        )
-      )
+
+      ]
+    )
+    )
     );
   }
 }

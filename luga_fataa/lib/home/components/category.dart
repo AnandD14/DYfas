@@ -29,12 +29,15 @@ class Category extends StatelessWidget {
         height: size.height * 0.2,
         child: InkWell(
           child: Card(
-            color: kSecondaryColor,
-            child: Column(
-              children: <Widget> [
-                Align(
-                  alignment: Alignment.center,
-                  child: Text(category,
+              elevation: 2.0,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0)),
+              color: kSecondaryColor,
+              child: Column(
+                children: <Widget> [
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(category,
                     style:TextStyle(
                       fontFamily: 'SourceCodePro',
                       fontSize: 17,
