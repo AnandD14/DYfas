@@ -1,0 +1,24 @@
+{
+  "home": [
+    {
+      "category": "TRENDING",
+      "imageURL": "assets/images/test.jpeg"
+    },
+    {
+      "category": "LEHENGAS",
+      "imageURL": "assets/images/test.jpeg"
+    },
+    {
+      "category": "KURTAS",
+      "imageURL": "assets/images/test.jpeg"
+    },
+    {
+      "category": "GOWNS",
+      "imageURL": "assets/images/test.jpeg"
+    },
+    {
+      "category": "SARIS",
+      "imageURL": "assets/images/test.jpeg"
+    }
+  ]
+}
